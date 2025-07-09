@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Mock2Win🎙️🤖
 
-First, run the development server:
+This is a full-stack real-time AI-powered voice interview web application that lets users practice mock interview questions via voice along with feedback. Built using React, Node.js, Socket.io, OpenAI (for speech-to-text and GPT), and MongoDB, this project allows users to have seamless voice interactions with an AI interviewer.
+
+---
+
+## 🚀 Features
+
+- 🎤 Real-time voice recording and streaming
+- 🧠 AI-generated questions and follow-ups (via GPT-4)
+- 📝 Speech-to-text conversion (via OpenAI Whisper)
+- 👤 User authentication (login/signup)
+- 📊 Session storage and history tracking
+- - 🧾AI-generated performance feedback at the end of each interview session based on candidate responses
+- 🌐 Full deployment ready (Vercel + Render/Heroku)
+
+
+---
+
+## 🧰 Tech Stack
+
+| Layer        | Technology                          |
+|--------------|--------------------------------------|
+| Frontend     | React, Tailwind CSS, Socket.io-client |
+| Backend      | Node.js, Express, Socket.io          |
+| AI Services  | OpenAI Whisper API + GPT-4 API       |
+| Auth         | JWT (JSON Web Tokens)                |
+| Database     | MongoDB (via Mongoose)               |
+| Deployment   | Vercel (Frontend) + Render/Heroku (Backend) |
+
+---
+
+## 🛠️ Installation
+
+### Prerequisites
+
+- Node.js v16+
+- MongoDB (local or Atlas)
+- OpenAI API key
+- Git
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/SwiftCoder05/Mock2Win.git
+cd Mock2Win
+````
+
+### Backend Setup
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file in the `backend` folder with the following:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+OPENAI_API_KEY=your_openai_api_key
+```
+
+Start the backend server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Frontend Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd ../frontend
+npm install
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Visit: [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧭 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+ai-voice-agent/
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   └── .env
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.js
+├── README.md
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+---
+
